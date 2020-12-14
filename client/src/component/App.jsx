@@ -28,10 +28,10 @@ export default class App extends React.Component {
           justify="flex-start"
           alignItems="flex-start"
         >
-          <Grid item md={3} className="side-bar">
+          <Grid item xs md={3} className="side-bar" m={"20px"}>
             <SideBar data={this.state.data} />
           </Grid>
-          <Grid item md={8} className="feed" justify="center">
+          <Grid item xs md={9} className="feed" justify="center">
             <ProjectFeed data={this.state.data} />
           </Grid>
         </Grid>

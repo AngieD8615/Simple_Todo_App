@@ -24,9 +24,13 @@ export default function ProjectTile(props) {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <div className="project-name">{props.project.project}</div>
+          <div className="project-name">
+            <b>{props.project.project}</b>
+          </div>
           <CompletionBar className="completion" data={props.project.tasks} />
-
+          <div>
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+          </div>
         </AccordionSummary>
         <AccordionDetails style={{ background: "rgb(235, 234, 234)" }}>
           <div className="tile-container">

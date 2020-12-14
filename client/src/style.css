@@ -1,3 +1,19 @@
+.\31 {
+  color: red;
+}
+
+.\32 {
+  color: yellow;
+}
+
+.\33 {
+  color: green;
+}
+
+AccordionDetails {
+  background-color: grey;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -17,12 +33,13 @@ h1 {
   align-items: center;
 }
 
-.nav i {
-  margin: 22px;
-}
 
 i {
   margin: 10px;
+}
+
+.nav i {
+  margin: 22px;
 }
 
 .nav {
@@ -32,7 +49,13 @@ i {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
+  background: lightgrey;
+  box-shadow: 1px 2px 1px 1px #888888;
+  border-radius: 5px;
+}
 
+#panel1bh-header {
   background: lightgrey;
   box-shadow: 1px 2px 1px 1px #888888;
   border-radius: 5px;
@@ -45,46 +68,12 @@ i {
 .project-name {
   display: flex;
   flex-basis: 60%;
-}
-
-.total {
-  display: flex;
-  width: 40%;
-  box-shadow: 1px 1px 1px 1px #888888;
-  border-radius: 5px;
-}
-
-.complete {
-  display: flex;
-  background: rgb(50, 20, 220);
-  border-radius: 5px;
-}
-
-#panel1bh-header {
-  background: lightgrey;
-  box-shadow: 1px 2px 1px 1px #888888;
-  border-radius: 5px;
+  align-self: center;
 }
 
 .taskHeader {
   display: flex;
   flex-basis: 30%;
-}
-
-.\31 {
-  color: red;
-}
-
-.\32 {
-  color: yellow;
-}
-
-.\33 {
-  color: green;
-}
-
-AccordionDetails {
-  background-color: grey;
 }
 
 .task-container {
@@ -95,4 +84,20 @@ AccordionDetails {
 
 .task-tile {
   padding: 10px;
+}
+
+.total {
+  height: 20px;
+  display: flex;
+  width: 40%;
+  box-shadow: 1px 1px 1px 1px #888888;
+  border-radius: 5px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.complete {
+  display: flex;
+  background: rgb(50, 20, 220);
+  border-radius: 5px;
 }
