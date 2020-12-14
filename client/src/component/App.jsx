@@ -9,10 +9,13 @@ import Grid from '@material-ui/core/Grid';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      data: this.props.data,
+    };
   }
 
   render() {
+    
     return (
       <div className="app">
         <div className="nav">
@@ -26,10 +29,10 @@ export default class App extends React.Component {
           alignItems="flex-start"
         >
           <Grid item md={3} className="side-bar">
-            <SideBar />
+            <SideBar data={this.state.data} />
           </Grid>
           <Grid item md={8} className="feed" justify="center">
-            <ProjectFeed />
+            <ProjectFeed data={this.state.data} />
           </Grid>
         </Grid>
       </div>
