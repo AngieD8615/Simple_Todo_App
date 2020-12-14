@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import '../style.css'
+import "../style.css";
 
 export default function TaskTile(props) {
   return (
@@ -15,12 +15,18 @@ export default function TaskTile(props) {
       </Grid>
       <Grid container item md={3} className="task-end">
         <Grid>Deadline: {props.task.deadline}</Grid>
-        <Grid>
+        <Grid>Time remaining: {props.task.hoursNeeded}hrs</Grid>
+        <Grid container>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+          <i class="fa fa-pencil" aria-hidden="true"></i>
           {props.task.isComplete ? (
-            <i className="fa fa-check-square-o primary-color" aria-hidden="true"></i>
+            <i
+              className="fa fa-check-square-o primary-color"
+              aria-hidden="true"
+            ></i>
           ) : (
             <i
-              className={`fa fa-square-o ${props.task.priority}`}
+              className={`fa fa-square ${props.task.priority}`}
               aria-hidden="true"
             ></i>
           )}

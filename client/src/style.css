@@ -9,18 +9,20 @@
 
 h1 {
   font-family: "Indie Flower", cursive;
-
 }
 
 .home {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
+.nav i {
+  margin: 22px;
 }
 
 i {
-  margin: 22px;
+  margin: 10px;
 }
 
 .nav {
@@ -34,7 +36,6 @@ i {
   background: lightgrey;
   box-shadow: 1px 2px 1px 1px #888888;
   border-radius: 5px;
-
 }
 
 .primary-color {
@@ -43,7 +44,20 @@ i {
 
 .project-name {
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 60%;
+}
+
+.total {
+  display: flex;
+  width: 40%;
+  box-shadow: 1px 1px 1px 1px #888888;
+  border-radius: 5px;
+}
+
+.complete {
+  display: flex;
+  background: rgb(50, 20, 220);
+  border-radius: 5px;
 }
 
 #panel1bh-header {
@@ -74,11 +88,11 @@ AccordionDetails {
 }
 
 .task-container {
-  box-shadow: .5px .5px .5px .5px #888888;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
   border-radius: 5px;
   margin: 10px;
 }
 
 .task-tile {
-  padding: 10px
+  padding: 10px;
 }

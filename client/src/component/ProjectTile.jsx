@@ -5,6 +5,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import CompletionBar from "./CompletionBar.jsx";
 
 export default function ProjectTile(props) {
   const [expanded, setExpanded] = React.useState(false);
@@ -24,7 +25,8 @@ export default function ProjectTile(props) {
           id="panel1bh-header"
         >
           <div className="project-name">{props.project.project}</div>
-          <div className="completion">completion bar goes here</div>
+          <CompletionBar className="completion" data={props.project.tasks} />
+
         </AccordionSummary>
         <AccordionDetails style={{ background: "rgb(235, 234, 234)" }}>
           <div className="tile-container">
