@@ -15,11 +15,11 @@ export default function TaskTile(props) {
       </Grid>
       <Grid container item md={3} className="task-end">
         <Grid>Deadline: {props.task.deadline}</Grid>
-        <Grid>Time remaining: {props.task.hoursNeeded}hrs</Grid>
+        <Grid>Time remaining: {props.task.hours_remaining}hrs</Grid>
         <Grid container>
           <i class="fa fa-trash" aria-hidden="true"></i>
           <i class="fa fa-pencil" aria-hidden="true"></i>
-          {props.task.isComplete ? (
+          {props.task.is_complete ? (
             <i
               className="fa fa-check-square-o primary-color"
               aria-hidden="true"

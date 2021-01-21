@@ -17,7 +17,6 @@ export default class App extends React.Component {
 
   componentDidMount() {
     axios.get("/projects").then((res) => {
-      console.log(res);
       this.setState({ data: res.data });
     });
   }
@@ -38,10 +37,10 @@ export default class App extends React.Component {
             justify="flex-start"
             alignItems="flex-start"
           >
-            <Grid item xs md={2} className="side-bar" m={"20px"}>
+            <Grid item xs md={3} className="side-bar" m={"20px"}>
               <SideBar data={this.state.data} />
             </Grid>
-            <Grid item xs md={10} className="feed" justify="center">
+            <Grid item xs md={9} className="feed" justify="center">
               <ProjectFeed data={this.state.data} />
             </Grid>
           </Grid>
