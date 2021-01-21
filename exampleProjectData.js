@@ -1,0 +1,2 @@
+let projectData = "INSERT INTO projects (project) VALUES ('HandmadeIntelligent Frozen Fish'),('IncredibleIntelligent Rubber Bike'),('ErgonomicFantastic Metal Sausages'),('FantasticGeneric Metal Gloves'),('FantasticUnbranded Concrete Chair'),('HandcraftedHandmade Concrete Gloves'),('GenericGeneric Rubber Table'),('RefinedIntelligent Concrete Salad'),('LicensedAwesome Fresh Salad'),('GorgeousSleek Soft Fish');"
+module.exports = projectData;
