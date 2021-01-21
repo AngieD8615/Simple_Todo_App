@@ -5,8 +5,6 @@ export default function SideBar(props) {
   const [expand, setExpand] = useState({});
   const handleClick = (e) => {
     e.target.key
-    if (expand[e.target.key])
-
   }
   return (
     <div style={{margin: "15px"}}>

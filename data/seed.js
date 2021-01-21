@@ -1,13 +1,9 @@
 var mysql = require("mysql");
 var projectData = require("../exampleProjectData");
 var taskData = require("../exampleTaskData");
+var config = require("../mysql.config");
 
-
-var con = mysql.createConnection({
-  user: "angieD",
-  password: "password1",
-  database: "projectsdb"
-});
+var con = mysql.createConnection(config);
 
 con.query(projectData, (err, results, field) => {
   if (err) {
