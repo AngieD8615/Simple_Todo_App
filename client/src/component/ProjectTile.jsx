@@ -6,13 +6,14 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CompletionBar from "./CompletionBar.jsx";
+import AddTask from "./AddTasks.jsx";
 
 export default function ProjectTile(props) {
   const [expanded, setExpanded] = React.useState(false);
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
+  console.log("pTile: ", props)
   return (
     <div className="project-tile">
       <Accordion
@@ -29,7 +30,7 @@ export default function ProjectTile(props) {
           </div>
           <CompletionBar className="completion" data={props.project.tasks} />
           <div>
-            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <AddTask project={props.project}/>
           </div>
         </AccordionSummary>
         <AccordionDetails style={{ background: "rgb(235, 234, 234)" }}>

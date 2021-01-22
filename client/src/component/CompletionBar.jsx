@@ -2,7 +2,6 @@ import React from "react";
 import "../style.css";
 
 export default function CompletionBar(props) {
-  console.log("compl bar props", props.data);
 
   let tasksComplete = props.data.reduce(
     (accumulator, currentValue) =>

@@ -31,7 +31,6 @@ app.get("/projects", (req, res) => {
           let task = {task_id, title, description, priority, deadline, is_complete, hours_remaining, created_at}
           resArr[resArr.length - 1].tasks.push(task);
         })
-        console.log(resArr, "length: ", resArr.length)
         res.status(200).send(resArr)
       }
     }
