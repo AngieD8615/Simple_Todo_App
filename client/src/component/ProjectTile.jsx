@@ -2,7 +2,7 @@ import React from "react";
 import TaskTile from "./TaskTile.jsx";
 import "../style.css";
 import CompletionBar from "./CompletionBar.jsx";
-import AddTask from "./AddTasks.jsx";
+import AddTaskDialogBox from "./AddTaskDialogBox.jsx";
 
 export default function ProjectTile(props) {
   const [expanded, setExpanded] = React.useState(false);
@@ -18,7 +18,7 @@ export default function ProjectTile(props) {
         </div>
         <CompletionBar className="completion" data={props.project.tasks} />
         <div>
-          <AddTask project={props.project} />
+          <AddTaskDialogBox project={props.project} />
         </div>
         <div onClick={handleExpand}>
           {expanded ? (

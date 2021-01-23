@@ -11,19 +11,19 @@ export default function PrioritySelector() {
       <FormLabel component="legend">Priority</FormLabel>
       <RadioGroup row aria-label="position" name="position" defaultValue="1">
         <FormControlLabel
-          value="1"
+          value={1}
           control={<Radio color="red" />}
           label="Do Now"
           labelPlacement="top"
         />
         <FormControlLabel
-          value="2"
+          value={2}
           control={<Radio color="yellow" />}
           label="Do Next"
           labelPlacement="top"
         />
         <FormControlLabel
-          value="3"
+          value={3}
           control={<Radio color="green" />}
           label="Do Later"
           labelPlacement="top"

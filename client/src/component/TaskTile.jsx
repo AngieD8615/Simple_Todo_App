@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import "../style.css";
 
 export default function TaskTile(props) {
+  
   return (
     <Grid container className="task-tile" spacing={1}>
       <Grid container item md={9} className="task-front">
@@ -15,7 +16,7 @@ export default function TaskTile(props) {
       </Grid>
       <Grid container item md={3} className="task-end">
         <Grid>Deadline: {props.task.deadline}</Grid>
-        <Grid>Time remaining: {props.task.hours_remaining}hrs</Grid>
+        <Grid>Est. time required: {props.task.hours_remaining}hrs</Grid>
         <Grid container>
           <i class="fa fa-trash" aria-hidden="true"></i>
           <i class="fa fa-pencil" aria-hidden="true"></i>

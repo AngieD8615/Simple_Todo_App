@@ -25,6 +25,7 @@ app.get("/projects", (req, res) => {
         let resArr = [];
         results.forEach(result => {
           let { project_id, project, task_id, title, description, priority, deadline, is_complete, hours_remaining, created_at} = result;
+          deadline = deadline.toString().slice(0, 10);
           if (resArr.length === 0 || resArr[resArr.length - 1].project_id !== project_id) {
             resArr.push({project_id, project, tasks:[]});
           }
