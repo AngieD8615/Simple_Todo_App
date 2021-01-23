@@ -10,10 +10,6 @@
   color: green;
 }
 
-AccordionDetails {
-  background-color: grey;
-}
-
 .app {
   display: flex;
   flex-direction: column;
@@ -71,6 +67,15 @@ i {
   align-self: center;
 }
 
+.project-tile {
+  display: flex;
+  padding: 16px;
+  margin: 4px;
+  background: lightgrey;
+  box-shadow: 1px 2px 1px 1px #888888;
+  border-radius: 5px;
+}
+
 .taskHeader {
   display: flex;
   flex-basis: 30%;
@@ -100,4 +105,13 @@ i {
   display: flex;
   background: rgb(50, 20, 220);
   border-radius: 5px;
+}
+
+.fa-chevron-circle-up, .fa-chevron-circle-down, .fa-plus-square {
+  cursor: pointer;
+} 
+
+.fa-chevron-circle-up:hover, .fa-chevron-circle-down:hover, .fa-plus-square:hover { 
+  transform: scale(1.5); 
+  color: rgb(50, 20, 220);
 }

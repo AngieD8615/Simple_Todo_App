@@ -1,50 +1,44 @@
 import React from "react";
 import TaskTile from "./TaskTile.jsx";
 import "../style.css";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CompletionBar from "./CompletionBar.jsx";
 import AddTask from "./AddTasks.jsx";
 
 export default function ProjectTile(props) {
   const [expanded, setExpanded] = React.useState(false);
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
+  const handleExpand = () => {
+    setExpanded(!expanded);
   };
-  console.log("pTile: ", props)
+
   return (
-    <div className="project-tile">
-      <Accordion
-        expanded={expanded === "panel1"}
-        onChange={handleChange("panel1")}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-        >
-          <div className="project-name">
-            <b>{props.project.project}</b>
-          </div>
-          <CompletionBar className="completion" data={props.project.tasks} />
-          <div>
-            <AddTask project={props.project}/>
-          </div>
-        </AccordionSummary>
-        <AccordionDetails style={{ background: "rgb(235, 234, 234)" }}>
-          <div className="tile-container">
-            {props.project.tasks.map((task) => {
-              return (
-                <div className="task-container">
-                  <TaskTile task={task} />
-                </div>
-              );
-            })}
-          </div>
-        </AccordionDetails>
-      </Accordion>
-    </div>
+    <>
+      <div className="project-tile">
+        <div className="project-name">
+          <b>{props.project.project}</b>
+        </div>
+        <CompletionBar className="completion" data={props.project.tasks} />
+        <div>
+          <AddTask project={props.project} />
+        </div>
+        <div onClick={handleExpand}>
+          {expanded ? (
+            <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+          ) : (
+            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+          )}
+        </div>
+      </div>
+      {expanded ? (
+        <div className="tile-container">
+          {props.project.tasks.map((task) => {
+            return (
+              <div className="task-container">
+                <TaskTile task={task} />
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+    </>
   );
 }

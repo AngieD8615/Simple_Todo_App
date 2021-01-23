@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 export default function SideBar(props) {
   const [expand, setExpand] = useState({});
   const handleClick = (e) => {
-    e.target.key
+    console.log(e.target.key)
   }
   return (
     <div style={{margin: "15px"}}>
@@ -22,7 +22,7 @@ export default function SideBar(props) {
             <Grid className="primary-color">
               <i className="fa fa-thumb-tack fa-lg" aria-hidden="true"></i>
             </Grid>
-            <Grid onClick={(e)=>{handleClick(e)}}>{project.project}</Grid>
+            <Grid onClick={(e)=>{handleClick(e)}} >{project.project}</Grid>
           </Grid>
         );
       })}
