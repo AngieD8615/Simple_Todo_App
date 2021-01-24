@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import 'date-fns';
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -9,7 +10,6 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import PrioritySelector from "./PrioritySelector.jsx";
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from "@material-ui/pickers";
-import Axios from "axios";
 
 
 export default function AddTaskDialogBox(props) {
@@ -28,7 +28,6 @@ export default function AddTaskDialogBox(props) {
 
   const handleClickOpenForm = (e) => {
     setOpenForm(true);
-    console.log("find current project_id: ", props)
   };
 
   const handleClose = (e) => {
@@ -36,7 +35,12 @@ export default function AddTaskDialogBox(props) {
   };
 
   const handleSubmit = (e) => {
-    Axios.
+    console.log("handleSubmit fired", formData)
+    axios
+      .post("/projects/tasks", formData)
+      .then((res) => {
+        console.log("from form: ", res)
+      })
     setOpenForm(false);
   }
 
@@ -46,7 +50,6 @@ export default function AddTaskDialogBox(props) {
     let newData = formData;
     newData[name] = newVal;
     setFormData(newData);
-    console.log(formData)
   };
 
   return (

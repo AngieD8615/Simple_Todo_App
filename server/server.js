@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const { getAllProjects, getOneProject } = require('./query');
+const { getAllProjects, getOneProject, postNewTask } = require('./query');
 const PORT = 3010;
 
 
@@ -39,16 +39,20 @@ app.get("/projects", (req, res) => {
   
 })
 
-app.get("/projects/:id", (req, res) => {
-  
-})
-
 app.post("/projects", (req, res) => {
   
 })
 
-app.post("/projects/:id/tasks", (req, res) => {
-  
+app.post("/projects/tasks", (req, res) => {
+  console.log("form server req.body: ")
+  postNewTask(req.body, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.status(200).send(result)
+    }
+  })
+  res.send()
 })
 
 app.patch("/projects", (req, res) => {

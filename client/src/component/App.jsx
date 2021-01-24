@@ -20,20 +20,6 @@ export default function App() {
         setIsLoading(false);
       });
   });
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     data: [],
-  //     isLoading: true,
-  //   };
-  // }
-  // componentDidMount() {
-  //   axios.get("/projects")
-  //     .then((res) => {
-  //       this.setState({ data: res.data });
-  //       console.log("data: ", res.data[0])
-  //     })
-  // }
 
   return (
     <div className="app">
